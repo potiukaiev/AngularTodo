@@ -35,7 +35,7 @@ export class TodoComponent implements OnInit {
   }
 
   handleAddTodo = () => {
-    this.todos.unshift({id: this.todos.pop().id + 1, todo: this.currentTodo})
+    this.todos.push({id: this.todos[this.todos.length] ? this.todos[this.todos.length -1].id + 1 : 1, todo: this.currentTodo})
   }
 
   deleteTodo = (id) => {
