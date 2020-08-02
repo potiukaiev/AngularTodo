@@ -1,0 +1,17 @@
+<div class="todo-list-wrapper">
+  <div class="todo-list">
+  <div class="todo" *ngFor="let todo of todos">
+    <div class="todo-text-wrapper" > <span>{{todo.todo}}</span></div>
+    <div class="todo-remove" (click)="deleteTodo(todo.id)"></div>
+  </div>
+  </div>
+  <div class="input section">
+  <div class="todo-input-wrapper">
+    <label for="todo-input">
+      Add todo:
+      <input type="text" id="todo-input" (change)="handleOnChange($event)">
+      <button class="add-todo" (click)="handleAddTodo()">Add</button>
+    </label>
+  </div>
+</div>
+</div>
