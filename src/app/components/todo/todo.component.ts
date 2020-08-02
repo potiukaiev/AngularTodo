@@ -35,7 +35,8 @@ export class TodoComponent implements OnInit {
   }
 
   handleAddTodo = () => {
-    this.todos.push({id: this.todos[this.todos.length] ? this.todos[this.todos.length -1].id + 1 : 1, todo: this.currentTodo})
+    console.log(this.todos)
+    this.todos.push({id: this.todos.length ? this.todos[this.todos.length -1].id + 1 : 1, todo: this.currentTodo})
   }
 
   deleteTodo = (id) => {
